@@ -34,8 +34,13 @@ public class Util {
   private static void runTests(Day day, String[] testInput) {
     if (testInput.length > 0) {
       System.out.println("\n[TEST CASES]");
-      System.out.println("Part 1 test: " + day.partOne(testInput));
-      System.out.println("Part 2 test: " + day.partTwo(testInput));
+      try {
+        System.out.println("Part 1 test: " + day.partOne(testInput));
+        System.out.println("Part 2 test: " + day.partTwo(testInput));
+      } catch (Exception e) {
+        System.out.println("Something went wrong: " + e.getMessage());
+      }
+
     } else {
       System.err.println("Warning: No test data found - skipping tests");
     }
@@ -44,8 +49,12 @@ public class Util {
   private static void runSolutions(Day day, String[] mainInput) {
     if (mainInput.length > 0) {
       System.out.println("\n[SOLUTIONS]");
-      System.out.println("Part 1: " + day.partOne(mainInput));
-      System.out.println("Part 2: " + day.partTwo(mainInput));
+      try {
+        System.out.println("Part 1: " + day.partOne(mainInput));
+        System.out.println("Part 2: " + day.partTwo(mainInput));
+      } catch (Exception e) {
+        System.out.println("Something went wrong: " + e.getMessage());
+      }
     } else {
       System.err.println("Warning: No input data found - skipping solutions");
     }
