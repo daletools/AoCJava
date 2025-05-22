@@ -18,18 +18,10 @@ public class Day03 extends Day {
 
     for (char c : input[0].toCharArray()) {
       switch (c) {
-        case '^' -> {
-          y++;
-        }
-        case '>' -> {
-          x++;
-        }
-        case '<' -> {
-          x--;
-        }
-        case 'v' -> {
-          y--;
-        }
+        case '^' -> y++;
+        case '>' -> x++;
+        case '<' -> x--;
+        case 'v' -> y--;
       }
       locSet.add(new Loc(x, y));
     }
@@ -85,7 +77,7 @@ public class Day03 extends Day {
     return locSet.size();
   }
 
-  class Loc {
+  static class Loc {
     int x;
     int y;
     Loc(int x, int y) {

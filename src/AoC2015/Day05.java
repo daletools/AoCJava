@@ -3,7 +3,6 @@ package AoC2015;
 import common.Day;
 import common.Util;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 public class Day05 extends Day {
@@ -12,7 +11,7 @@ public class Day05 extends Day {
   }
 
   @Override
-  public long partOne(String[] input) throws NoSuchAlgorithmException {
+  public long partOne(String[] input) {
     long count = 0;
     for (String s : input) {
       if (isNice(s)) {
@@ -34,7 +33,7 @@ public class Day05 extends Day {
       char curr = s.charAt(i);
       if (prev == curr) repeat = true;
       if ("aeiou".contains(String.valueOf(curr))) numVowels++;
-      String pair = String.valueOf(prev) + String.valueOf(curr);
+      String pair = prev + String.valueOf(curr);
       if (Arrays.asList(badStrings).contains(pair)) {
         forbidden = true;
         break;

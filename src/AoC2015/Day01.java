@@ -5,7 +5,7 @@ import common.Util;
 import java.io.FileNotFoundException;
 
 public class Day01 extends Day {
-  public static void main(String[] args) throws FileNotFoundException {
+  public static void main(String[] args) {
     Util.runDay(new Day01());
   }
 

@@ -3,7 +3,6 @@ package AoC2015;
 import common.Day;
 import common.Util;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
 public class Day06 extends Day {
@@ -12,7 +11,7 @@ public class Day06 extends Day {
   }
 
   @Override
-  public long partOne(String[] input) throws NoSuchAlgorithmException {
+  public long partOne(String[] input) {
     boolean[][] lights = new boolean[1000][1000];
 
     for (String line : input) {
